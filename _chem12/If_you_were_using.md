@@ -1,6 +1,6 @@
 ---
   layout: post
-  title: If you were using
+  title: If you were using "cathodic protection," what would you be trying to protect?
   author: Joe Schwarcz
   source: McGill Blogs
 ---
