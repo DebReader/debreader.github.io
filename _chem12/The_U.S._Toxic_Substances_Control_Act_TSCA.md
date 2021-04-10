@@ -6,7 +6,7 @@
 ---
   HYPERLINK
 "http://blogs.mcgill.ca/oss/2016/08/27/the-u-s-toxic-substances-control-
-act-tsca/"  The U.S. Toxic Substances Control Act (TSCA) 
+act-tsca/"  The U.S. Toxic Substances Control Act (TSCA)
 
   Amidst the cacophony of jingoist, vacuous blather at the Republican
 Convention there were some noteworthy phrases that probably slipped by
@@ -53,11 +53,10 @@ mandatory deadlines. The new bill has the support of the chemical
 industry because it should reduce consumer angst given that EPA will now
 be charged with examining the safety of chemicals before they go on the
 market. But here is the issue. While Republicans in the House voted for
-the bill, they also voted to cut the EPA’s funding and staffing for
-2017. If EPA is going to carry out its new duties effectively, it will
+the bill, they also voted to cut the EPA’s funding and staffing for 2017.
+If EPA is going to carry out its new duties effectively, it will
 need more, not less funding. The plan is that some of the shortfall will
 be offset by charging companies fees for submitting chemicals for EPA to
 review. That may not sit well with Republicans.
 
 Joe Schwarcz PhD – Aug 27th/2016
-
