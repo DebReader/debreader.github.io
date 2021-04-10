@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.71/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.71/vfs_fonts.min.js"></script>
+
+
+<header>
+  <h1>{{ page.title }}</h1>
+</header>
+
+<hr class="stylish" />
+
+
+<main role="main">
+  <div class="content dongxi">
+    {{content}}
+  </div>
+  <div class="magic">
+    <form id="gimmick">
+      <label>Title of Article:</label>
+    	<input type="text" value="{{ page.title }}" /> <br />
+      <label>Author:</label>
+    	<input type="text" value="{{ page.author }}" /> <br />
+      <label>Source:</label>
+    	<input name="title" type="text" value="{{ page.source }}" /> <br />
+      <label>Main idea:</label>
+    	<textarea cols="30" rows="2"></textarea><br />
+      <label>Idea 1:</label> <br />
+      <textarea cols="30" rows="4"></textarea><br />
+      <label>Idea 2:</label> <br />
+      <textarea cols="30" rows="4"></textarea><br />
+      <label>Idea 3:</label> <br />
+      <textarea cols="30" rows="4"></textarea><br />
+      <label class="inline">Vocab 1:</label> <input type="text" value="" /> <br/>
+      <label class="inline">Definition 1:</label> <input type="text" value="" /> <br/>
+      <label class="inline">Vocab 2:</label> <input type="text" value="" /> <br/>
+      <label class="inline">Definition 2:</label> <input type="text" value="" /> <br/>
+      <label class="inline">Vocab 3:</label> <input type="text" value="" /> <br/>
+      <label class="inline">Definition 3:</label> <input type="text" value="" /> <br/>
+      <label>Outcome, Ending, or Future Projections</label> <br />
+      <textarea cols="30" rows="4"></textarea><br />
+      <label class="inline">Discussion Q1:</label> <input type="text" value="" /> <br/>
+      <label class="inline">Discussion Q2:</label> <input type="text" value="" /> <br/>
+      <label class="inline">Discussion Q3:</label> <input type="text" value="" /> <br/>
+    </form>
+    <button value="Submit" id="drSubmit">Submit</button>
+  <p id="demo"></p>
+  </div>
+
+</main>
+
+<script>
+  document.getElementById('drSubmit').onclick = function() {
+  var x = document.getElementById("gimmick");
+  pdfMake.createPdf(
+  	{
+  		content: [
+      		{text: 'Title of Article', style: 'header'},
+      		x.elements[0].value,
+          'Author: '.concat(x.elements[1].value),
+          'Source: '.concat(x.elements[2].value),
+          {text: 'Main Idea', style: 'header'},
+          x.elements[3].value,
+          {text: 'Detail 1', style: 'header'},
+          x.elements[4].value,
+          {text: 'Detail 2', style: 'header'},
+          x.elements[5].value,
+          {text: 'Detail 3', style: 'header'},
+          x.elements[6].value,
+          {text: 'Vocabulary Words', style: 'header'},          {
+          	ul: [
+            	''.concat(x.elements[7].value, ' → ', x.elements[8].value),
+            	''.concat(x.elements[9].value, ' → ', x.elements[10].value),
+            	''.concat(x.elements[11].value, ' → ', x.elements[12].value)
+            ]
+          },
+          {text: 'Outcome/Future Projections', style: 'header'},
+          x.elements[13].value,
+          {text: 'Discussion Questions', style: 'header'},
+          {
+          	ul: [
+            	x.elements[14].value,
+            	x.elements[15].value,
+            	x.elements[16].value
+            ]
+          }
+        ],
+      defaultStyle: {
+      	fontSize: 12
+      },
+      styles: {
+      	header: {
+        	fontSize: 18,
+          bold: true,
+          margin: [0, 10, 5, 5]
+        }
+      },
+      pageMargins: [ 60, 80, 60, 80 ]
+  	}
+  ).download('{{ page.title }}');
+}
+</script>

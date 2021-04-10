@@ -1,0 +1,34 @@
+title : The Deb-Reader
+name: 'The DebReader&trade;'
+description: 'Simple, light weight, responsive jekyll theme for hackers'
+
+markdown: kramdown
+highlighter: rouge
+javascript_enabled: false
+
+featured_posts_title: Unrelated
+featured_posts:
+  - url: '#'
+    title: 'Featured post #1'
+  - url: '#'
+    title: 'Featured post #2'
+  - url: '#'
+    title: 'Featured post #3'
+
+collections:
+  chem12:
+    title: Chemistry 12
+    default_open: false
+    output: true
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      title: Essays
+      permalink: /post/:title
+  - scope:
+      type: news
+    values:
+      title: News
+      permalink: /news/:title
